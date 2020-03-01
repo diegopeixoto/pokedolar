@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,800');
+
+body{
+    background: #92d1b4;
+    transition: background .3s ease-in-out;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
+}
