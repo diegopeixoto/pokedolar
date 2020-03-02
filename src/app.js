@@ -142,8 +142,8 @@ const catchPokemon = async () => {
       setStats(pokemonStats)
       setType(pokemonType)
 
-      pkmName.innerText=pokemonName
-      pkmJapName.innerText=pokemonNameJap
+      pkmName.innerText='#'+pokemonSpriteId+' '+pokemonName
+      pkmJapName.innerText=pokemonNameJap+' | R$ '+dollarValue.replace(/(\d).(?=\d)/g, '$1,')
       pkmSpriteHolder.src =pokemonSprite
 
       dollarSpan.innerText='R$ '+dollarValue.replace(/(\d).(?=\d)/g, '$1,')
