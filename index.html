@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Poké Dolar</title>
-  
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
-  
-  <link href="style.css" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Poké Dólar</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="src/style.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <div id="root"></div>
- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="scripts.js"></script>
+  <div class="container-fluid container-height" id="root">
+    <div class="row">
+           <div class="first-column col-md-3 col-12 col-sm-12 d-flex flex-column h-100">
+      </div>
+      <div class="second-column col-md-5 col-12 col-sm-12 d-flex pkm-img-position text-center text-md-left h-100">
+        <div class="pkm-img-container">
+          <img src="src/img/pkm/001Bulbasaur.png" id="pokemon-image" data-adaptive-background>
+          <span id="dollar-value">R$ 1,80</span>
+        </div>
+      </div>
+      <div class="third-column col-md-4 col-12 col-sm-12 d-flex mt-auto mb-auto flex-row align-items-center h-100 text-center text-md-left">
+        <div class="container-characteristics">
+          <div class="container-type" id="container-type">
+            <img src="src/img/types/Grass.png">
+            <img src="src/img/types/Poison.png">
+          </div>
+          <div class="name-container">
+            <h2 id="japanese-name">フシギダネ</h2>
+            <h1 id="pkm-name">Bulbasaur</h1>
+          </div>
+          <div class="container-stats">
+            <ul>
+              <li class="item-stats">
+                <span class="item-stats-pill">HP:
+                  <span id="hp-stat">45</span>
+                </span>
+              </li>
+              <li class="item-stats">
+                <span class="item-stats-pill">Ataque:
+                  <span id="attack-stat">49</span>
+                </span>
+              </li>
+              <li class="item-stats">
+                <span class="item-stats-pill">Defesa:
+                  <span id="defense-stat">49</span>
+                </span>
+              </li>
+              <li class="item-stats">
+                <span class="item-stats-pill">Ep. Ataque:
+                  <span id="sp-attack-stat">65</span>
+                </span>
+              </li>
+              <li class="item-stats">
+                <span class="item-stats-pill">Ep. Defesa:
+                  <span id="sp-defense-stat">65</span>
+                </span>
+              </li>
+              <li class="item-stats">
+                <span class="item-stats-pill">Velocidade:
+                  <span id="speed-stat">45</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <span id="copy">
+            <p>Desenvolvido por <a href="https://github.com/diegopeixoto">Diego Peixoto (github)</a></p>
+            <p> <a href="https://twitter.com/crazypxt">@crazypxt (twitter)</a> </p>
+            <p><br></p>
+            <p>© 2020 Pokémon. © 1995–2020 Nintendo/Creatures Inc.</p>
+            <p>/GAME FREAK inc.</p>
+            <p> Inspirado no bot para twitter @PokeDolar por @moutella </p>
+            <p><a href="README.md">Outros usos aqui README.md</a></p>
+            <div class="sharethis-inline-share-buttons"></div>
+           </span>
+        </div>
+      </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="src/app.js"></script>
+  <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5e5d47fdcdddeb00196ad2ff&product=inline-share-buttons" async="async"></script>
 </body>
-
 </html>

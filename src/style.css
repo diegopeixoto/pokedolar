@@ -1,11 +1,336 @@
+/***
+ * PokéDólar Stylesheet
+ * Developed by Diego Peixoto (https://github.com/diegopeixoto)
+ * Using Bootstrap
+ * Credits to:
+ * mauroWernly for base pokédex layout.
+ * © 2020 Pokémon. © 1995–2020 Nintendo/Creatures Inc./GAME FREAK inc.
+ */
+
+
+/* Font Import */
+
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+/* Basic Body Definitions */
 
 body{
-    background: #92d1b4;
-    transition: background .3s ease-in-out;
-    padding-top: 50px;
-    padding-bottom: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 100vh;
+  background: #92d1b4;
+  transition: background .3s ease-in-out;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100vh;
+}
+
+@media (max-width: 1024px){
+  .first-column,
+  .second-column,
+  .third-column{
+      height: auto !important;
+  }
+  body{
+      padding-top: 10px;
+      padding-bottom: 30px;
+  }
+}
+
+
+.container-height{
+  height: 100%;
+}
+
+.row{
+  height: 100%;
+}
+
+.name-container{
+  margin-top:0;
+  margin-bottom: 0;
+  left: 0;
+  right:auto;
+}
+
+
+#japanese-name{
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0,0,0,.75);
+}
+
+#copy{
+  color: #ffffff;
+  font-family: 'Fira Code', sans-serif;
+  font-size: 12;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0,0,0,.75);
+}
+
+#copy a{
+  color: #fff;
+  font-family: 'Fira Code', sans-serif;
+  font-size: 12;
+  text-decoration: underline;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0,0,0,.75);
+}
+
+#copy p{
+  text-align: right;
+  line-height: 0.5em;
+}
+
+@media (max-width: 600px){
+  #copy p{
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+}
+
+/* Start Of Pokémon Types */
+
+  .grass{
+    background: #49d0b0;
+    color: #373737
+  }
+
+  .water{
+    background: #76befe;
+    color: #373737
+  }
+
+  .fire{
+    background: #fc6c6d;
+    color: #373737
+  }
+
+  .electric{
+    background: #ffd76f;
+    color: #373737
+  }
+
+  .bug{
+    background: #3c9882;
+    color: #373737
+  }
+
+  .fairy{
+    background: rgb(233, 77, 184);
+    color: #373737
+  }
+
+  .ghost{
+    background: #1e1e1e;
+    color: #fff;
+  }
+
+  .rock{
+    background: #777777;
+    color: #fff;
+  }
+
+  .fighting{
+    background: #fcaf6c;
+    color: rgba(0, 0, 0, 0.022)
+  }
+
+  .ground{
+    background: #453624;
+    color: #fff;
+  }
+
+/* End Of Pokémon Types */
+
+
+
+
+#pkm-name{
+  color: #ffffff;
+  font-family:  'Yeon Sung', sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0,0,0,.25);
+}
+
+
+@media (max-width: 1024px){
+  .size-container{
+      margin-bottom: 5px;
+      margin-top:40px;
+  }
+  .name-container{
+      margin-top: 0;
+      padding-top: 150px;
+  }
+}
+
+@media (max-width: 1024px){
+  .name-container{
+      padding-top: 0%;
+  }
+}
+
+
+
+
+
+#pokemon-image{
+  max-width: 400px;
+  height: auto;
+}
+
+.pkm-img-position{
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pkm-img-container{
+  position: relative;
+  transition: background .3s ease-in-out;
+  background: transparent !important;
+}
+
+@media (max-width: 1024px) {
+  #pokemon-image{
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 60px;
+  }
+  .pkm-img-position{
+      justify-content: flex-end;
+  }
+  .container-characteristics{
+      margin-top: 40px;
+  }
+}
+
+#dollar-value{
+  display: block;
+  position: absolute;
+  bottom: auto;
+  top: 5px;
+  right: auto;
+  left: 0;
+  font-family: 'Yeon Sung', sans-serif;
+  font-size: 130px;
+  font-weight: 600;
+  word-break: keep-all;
+  word-wrap: normal;
+  transform: translateX(-45%);
+  opacity: .5;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+@media (max-width: 1140px){
+  #dollar-value{
+      font-size: 100px;
+
+  }
+}
+
+@media (max-width: 1024px){
+  #dollar-value{
+      font-size: 80px;
+
+  }
+}
+
+@media (max-width: 768px){
+  #dollar-value{
+      position: static;
+      transform: none;
+  }
+}
+
+@media (max-width: 600px){
+  #dollar-value{
+      font-size: 64px;
+  }
+}
+
+@media (max-width: 414px){
+  #dollar-value{
+      font-size: 48px;
+  }
+}
+
+.container-stats ul {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+li.item-stats .item-stats-pill {
+  background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  margin-right: 10px;
+  color: rgba(0,0,0,.65);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 20px 25px -10px rgba(0,0,0,.15)
+}
+
+li.item-stats{
+  display: inline-block;
+}
+
+.container-stats ul::before {
+  content: '';
+  display: block;
+  width: 4px;
+  top: 0;
+  right: auto;
+  bottom: 10px;
+  left: 0;
+  background: rgba(255,255,255,.35);
+  position: absolute;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .container-stats ul::before {
+      display: none;
+  }
+}
+
+h3{
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0 15px 30px rgba(0,0,0,.15)
+}
+
+.container-type img{
+  width: 64px;
+  height: 64px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+  border-radius: 50%;
+  box-shadow: 0 20px 25px -10px rgba(0,0,0,.15);
+  margin: 0 15px 15px 0;
+}
+
+
+.sidebar-container-top{
+  max-width: 80%;
+  flex-wrap: wrap;
 }
